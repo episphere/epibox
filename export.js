@@ -9,7 +9,7 @@ epibox=async function(){
 }
 */
 
-epibox = { // initiatization onload at episphere.github.io/epibox
+var epibox = { // initiatization onload at episphere.github.io/epibox
     ini: async function () {
         console.log(`epibox ini at ${Date()}`)
         epibox.readParms()
