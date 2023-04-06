@@ -198,6 +198,7 @@ epibox.getOauth = function (uri = location.origin) {
     //console.log(`oauth for ${location.origin}`)
     switch (uri) {
         case 'http://localhost:8000':
+        case 'http://127.0.0.1:8000':
             epibox.oauth = {
                 client_id: '52zad6jrv5v52mn1hfy1vsjtr9jn5o1w',
                 client_secret: '2rHTqzJumz8s9bAjmKMV83WHX1ooN4kT'
