@@ -24,7 +24,7 @@ epibox.login = async function () {
         epibox.oauth.token = JSON.parse(localStorage.epiBoxToken)
         const { expires_in } = epibox.oauth.token
         if (epibox.refreshTokenBeforeExpiry) {
-            clearTimeout(box.refreshTokenBeforeExpiry)
+            clearTimeout(epibox.refreshTokenBeforeExpiry)
         }
         epibox.refreshTokenBeforeExpiry = setTimeout(() => {
             console.log("REFRESH SUCCESSFUL")
