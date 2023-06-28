@@ -96,7 +96,7 @@ epibox.activeDivHtml = function () {
         <hr>
     </div>`
 }
-epibox.loginObservable = async function () {
+epibox.loginObservable = async function (redirect_uri="https://observablehq.com/@episphere/epibox") {
     epibox.readParms()
     epibox.loginObservableDiv = document.createElement('div')
     epibox.clearLog = function () { // reload page without parameters
@@ -131,7 +131,7 @@ epibox.loginObservable = async function () {
             epibox.observableToken()
             epibox.loginObservableDiv.innerHTML = `<h3>epiBox</h3>
             <p>
-            <button onclick="epibox.setURL('https://account.box.com/api/oauth2/authorize?client_id=${epibox.oauth.client_id}&response_type=code&redirect_uri=https://observablehq.com/@episphere/epibox')" style="background-color:yellow">Login Box</button>
+            <button onclick="epibox.setURL('https://account.box.com/api/oauth2/authorize?client_id=${epibox.oauth.client_id}&response_type=code&redirect_uri=${redirect_uri}')" style="background-color:yellow">Login Box</button>
             </p>&nbsp;`
         }
     }
